@@ -32,17 +32,17 @@ Basket Feature:
 https://github.com/slimnathie/shop.git
 ``` 
 
-2. Copy .env.example to .env
-
-cp .env.example .env
+2. Run `cp .env.example .env` to get env variables
 
 3. Run `composer install` to get dependencies
 
-4. Generate application key
+4. Run migrations `php artisan migrate`
+
+5. Generate application key
 
 php artisan key:generate
 
-5. Install npm
+6. Install npm
 
 npm install
 npm run dev
