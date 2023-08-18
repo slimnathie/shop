@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use Illuminate\View\View;
 
 class CartController extends Controller
 {
-    public function index()
+    /**
+     * Gets the Items Selected for Cart view page.
+     *
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Foundation\Application
+     */
+    public function index() : View
     {
         $subtotal = 0;
         $shipping = 0;
@@ -16,8 +22,8 @@ class CartController extends Controller
 
         if(session('cart')) {
 
-            $shipping = 4.99;
-            $vat = 1.20;
+            $shipping = env('SHIPPING_FEE');
+            $vat = env('VAT_AMOUNT');
 
             foreach(session('cart') as $id => $details) {
                 $product = Product::find($id);

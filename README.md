@@ -44,8 +44,7 @@ php artisan key:generate
 
 6. Install npm
 
-npm install
-npm run dev
+npm install && npm run dev
 
 ## Unit Testing
 
