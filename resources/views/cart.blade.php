@@ -69,7 +69,7 @@
 </x-app-layout>
 
 
-    <script >
+<script >
 
     function updateItemQuantity(id, quantity) {
         if(quantity == 0) {
@@ -104,5 +104,5 @@
         });
     };
 
-    </script>
+</script>
 
