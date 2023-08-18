@@ -48,5 +48,5 @@ npm install && npm run dev
 
 ## Unit Testing
 
-
+run `php artisan test`
 
